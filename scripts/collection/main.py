@@ -1,14 +1,13 @@
 from yfinance_utils import getDataForDateRange
 
 debug = True
-save_to_file = True
+save_to_file = False
 file_path = "../../data/yfinance/"
 start_date = "2024-01-01"
 end_date = "2024-02-01"
 
 # Map of S&P 500 sectors to their Select Sector SPDR ETF tickers
 sector_to_ticker = {
-    "All": "SPY",
     "Communication Services": "XLC",
     "Consumer Discretionary": "XLY",
     "Consumer Staples": "XLP",
@@ -20,6 +19,9 @@ sector_to_ticker = {
     "Real Estate": "XLRE",
     "Technology": "XLK",
     "Utilities": "XLU",
+    "All Sectors": "SPY",
+    "Gold Index Fund": "GLD",
+    "United States Oil Fund": "USO",
 }
 
 #Reverse map for ETF ticker lookup
